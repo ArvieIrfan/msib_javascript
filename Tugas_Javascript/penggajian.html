@@ -1,0 +1,57 @@
+<script>
+    var nama = "Ridwan"
+    var jabatan = "Manager"
+    var status = "Menikah"
+    let gapok = 0
+
+    if(jabatan == "Manager"){
+        gapok = 15000000
+    }
+    else if(jabatan == "Asisten Manager"){
+        gapok = 10000000
+    }
+    else if(jabatan == "Staff"){
+        gapok = 5000000
+    }
+    else {
+        gapok = 0
+    }
+
+    let tunjab = gapok * 0.15
+    let bpjs = gapok * 0.1
+
+    let tunke = (status == "Menikah") ? gapok * 0.2 : 0
+    let total_gaji = gapok + tunjab + bpjs + tunke
+
+    document.write("<table align='center' border='1' cellpadding='10' cellspacing='0' width='65%'>"+
+        "<thead>"+
+            "<tr>"+
+                "<th>#</th>"+
+                "<th>Nama Pegawai</th>"+
+                "<th>Jabatan</th>"+
+                "<th>Status</th>"+
+                "<th>Gaji Pokok</th>"+
+                "<th>Tunjangan Jabatan</th>"+
+                "<th>BPJS</th>"+
+                "<th>Tunjangan Keluarga</th>"+
+            "</tr>"+
+       "</thead>"+
+        "<tfoot>"+
+            "<tr>"+
+                "<th colspan='8'>Total Gaji : Rp. "+ total_gaji.toLocaleString('de-DE') +"</th>"+
+           " </tr>"+
+        "</tfoot>"+
+        "<tbody>"+
+            "<tr>"+
+                "<td>1</td>"+
+                "<td>"+ nama +"</td>"+
+                "<td>"+ jabatan +"</td>"+
+                "<td>"+ status +"</td>"+
+                "<td>Rp. "+ gapok.toLocaleString('de-DE') +"</td>"+
+                "<td>Rp. "+ tunjab.toLocaleString('de-DE') +"</td>"+
+                "<td>Rp. "+ bpjs.toLocaleString('de-DE') +"</td>"+
+                "<td>Rp. "+ tunke.toLocaleString('de-DE') +"</td>"+
+            "</tr>"+
+        "</tbody>"+
+    "</table>")
+</script>
