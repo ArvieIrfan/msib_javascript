@@ -1,0 +1,32 @@
+<script>
+    
+    //deklarasi array
+    // array dimulai dari index 0
+    var buah = ['Pepaya', 'Mangga', 'Pisang', 'Jambu']
+    // mengganti index 2
+    buah[2] = 'Jeruk';
+
+    // length adalah library untuk melihat panjang data
+    for(var i=0; i < buah.length; i++){
+        document.write("<br> " + buah[i])
+    }
+
+
+    // array object
+    // array object terdiri dari key dan value
+    let p1 = {'nama' : 'Budi', 'divisi' : 'SDM', 'gaji' : 700000}
+    let p2 = {'nama' : 'Andi', 'divisi' : 'Marketing', 'gaji' : 800000}
+    let p3 = {'nama' : 'Ali', 'divisi' : 'Lapangan', 'gaji' : 800000}
+
+    let pegawai = [p1,p2,p3]
+
+    for(let i=0; i < pegawai.length; i++){
+        document.write("<br> " + pegawai[i])
+    }
+    for(p of pegawai){
+        document.write("<br> " + p.nama)
+        document.write("<br> " + p.divisi)
+        document.write("<br> " + p.gaji)
+    }
+
+</script>
