@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <h2>Letakkan cursor ke masing-masing kotak untuk melihat gambar</h2>
+    <div id="div1">
+        hewan bebek
+    </div>
+    <div id="kucing">
+        hewan kucing
+    </div>
+    <div id="kuda">
+        hewan kuda
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#div1").mouseover(function(){
+                $(this).css({
+                    "background-image": "url('https://media.istockphoto.com/id/506287144/id/foto/angsa-dalam-air.jpg?s=612x612&w=0&k=20&c=eHZujCDNdQus32LqUHQ5VuX8itlx6rvhuEGgAASj9BM=')",
+                    "background-size": "cover",
+                    "background-position": "center"
+                });
+            });
+            $("div").mouseout(function(){
+                $(this).css({
+                    background: "green"
+                });
+            });
+            $("#kucing").mouseover(function(){
+                $(this).css({
+                    "background-image": "url('https://images.tokopedia.net/img/KRMmCm/2023/8/29/360dbc5b-92c5-4e07-919f-7338969b4447.png')",
+                    "background-size": "cover",
+                    "background-position": "center"
+                });
+            });
+            $("#kuda").mouseover(function(){
+                $(this).css({
+                    "background-image": "url('https://cdn.pixabay.com/photo/2023/11/05/18/57/ai-generated-8368154_1280.png')",
+                    "background-size": "cover",
+                    "background-position": "center"
+                });
+            });
+        });
+    </script>
+</body>
+</html>
