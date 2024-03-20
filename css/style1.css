@@ -3,7 +3,7 @@ body{
     margin: auto;
     background-color: khaki;
 }
-div{
+#div1, #div2, #div3{
     display: inline-block;
     margin: auto;
     width: 80%;

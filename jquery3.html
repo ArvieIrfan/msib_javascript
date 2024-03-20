@@ -11,13 +11,15 @@
     <div id="div1">
         hewan bebek
     </div>
-    <div id="kucing">
+    <div id="div2">
         hewan kucing
     </div>
-    <div id="kuda">
+    <div id="div3">
         hewan kuda
     </div>
-
+    <audio id="bebek_sound" src="music/bebek_sound.mp3"></audio>
+    <audio id="kucing_sound" src="music/kucing_sound.mp3"></audio>
+    <audio id="kuda_sound" src="music/kuda_sound.mp3"></audio>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -27,25 +29,28 @@
                     "background-size": "cover",
                     "background-position": "center"
                 });
+                $("#bebek_sound").get(0).play(); // Memainkan suara bebek
             });
             $("div").mouseout(function(){
                 $(this).css({
                     background: "green"
                 });
             });
-            $("#kucing").mouseover(function(){
+            $("#div2").mouseover(function(){
                 $(this).css({
                     "background-image": "url('https://images.tokopedia.net/img/KRMmCm/2023/8/29/360dbc5b-92c5-4e07-919f-7338969b4447.png')",
                     "background-size": "cover",
                     "background-position": "center"
                 });
+                $("#kucing_sound").get(0).play(); // Memainkan suara kucing
             });
-            $("#kuda").mouseover(function(){
+            $("#div3").mouseover(function(){
                 $(this).css({
                     "background-image": "url('https://cdn.pixabay.com/photo/2023/11/05/18/57/ai-generated-8368154_1280.png')",
                     "background-size": "cover",
                     "background-position": "center"
                 });
+                $("#kuda_sound").get(0).play(); // Memainkan suara kuda
             });
         });
     </script>
